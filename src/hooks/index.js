@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import moment from 'moment';
 import { firebase } from '../firebase';
-import { tasksExist } from '../helpers';
+import { collatedTasksExist } from '../helpers';
 
 export const useTasks = selectedProject => {
   const [tasks, setTasks] = useState([]);
@@ -12,13 +12,13 @@ export const useTasks = selectedProject => {
     let unsubscribe = firebase
       .firestore()
       .collection('tasks')
-      .where('userId', '==', '1');
+      .where('userId', '==', 'jlIFXIwyAL3tzHMtzRbw');
 
     // pass in a selected project, if it doesn't exist in exist in tasksExist, projectID fires off
     // and gets projects using projectID. The project is checked if it is equal to TODAY. Moment
     // creates a nice date for us. Similarly checks INBOX.
     unsubscribe =
-      selectedProject && !tasksExist(selectedProject)
+      selectedProject && !collatedTasksExist(selectedProject)
         ? (unsubscribe = unsubscribe.where('projectId', '==', selectedProject))
         : selectedProject === 'TODAY'
         ? (unsubscribe = unsubscribe.where(
@@ -43,7 +43,7 @@ export const useTasks = selectedProject => {
         selectedProject === 'NEXT_7'
           ? newTasks.filter(
               task =>
-                moment(task.data, 'DD-MM-YYYY').diff(moment(), 'days') <= 7 &&
+                moment(task.date, 'DD-MM-YYYY').diff(moment(), 'days') <= 7 &&
                 task.archived !== true
             )
           : newTasks.filter(task => task.archived !== true)
@@ -73,7 +73,7 @@ export const useProjects = () => {
     firebase
       .firestore()
       .collection('projects')
-      .where('userId', '==', '1')
+      .where('userId', '==', 'jlIFXIwyAL3tzHMtzRbw')
       .orderBy('projectId')
       .get()
       .then(snapshot => {
