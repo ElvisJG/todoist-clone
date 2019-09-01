@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaMoon, FaSun } from 'react-icons/fa';
 import { useDarkMode } from '../../context';
 
@@ -6,6 +6,10 @@ export const Header = () => {
   const [shouldShowMain, setShouldShowMain] = useState(false);
   const [showQuickAddTask, setShowQuickAddTask] = useState(false);
   const { darkMode, setDarkMode } = useDarkMode();
+
+  useEffect(() => {
+    window.localStorage.setItem('WeDark?', darkMode);
+  }, [darkMode]);
 
   return (
     <header className='header' data-testid='header'>

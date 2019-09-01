@@ -258,6 +258,7 @@ $generic-bg: #22A1EE;
 /*---------------------------------------*/
 
 header {
+    @include no-select();
     border-bottom: solid 1px #103377;
     background-color: $generic-bg;
     -webkit-transition: height 200ms ease-in;
