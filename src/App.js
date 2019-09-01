@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Header } from './components/layout/Header';
 import { Content } from './components/layout/Content';
 import { ProjectsProvider, SelectedProjectProvider } from './context';
@@ -6,7 +6,6 @@ import { useDarkMode } from './context';
 
 export const App = () => {
   const { darkMode } = useDarkMode();
-
   return (
     <SelectedProjectProvider>
       <ProjectsProvider>

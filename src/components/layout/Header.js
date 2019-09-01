@@ -8,7 +8,7 @@ export const Header = () => {
   const { darkMode, setDarkMode } = useDarkMode();
 
   useEffect(() => {
-    window.localStorage.setItem('WeDark?', darkMode);
+    localStorage.setItem('WeDark?', JSON.stringify(darkMode));
   }, [darkMode]);
 
   return (
@@ -27,7 +27,11 @@ export const Header = () => {
               className='settings__darkmode'
               onClick={() => setDarkMode(!darkMode)}
             >
-              {darkMode ? <FaSun /> : <FaMoon />}
+              {darkMode ? (
+                <FaSun style={{ color: 'yellow' }} />
+              ) : (
+                <FaMoon style={{ color: '#142E3D' }} />
+              )}
             </li>
           </ul>
         </div>
