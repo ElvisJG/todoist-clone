@@ -44,7 +44,7 @@ ul {
 $generic-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px,
 rgba(0, 0, 0, 0.1) 0px 4px 11px;
 $generic-border: 1px solid #f1f1f1;
-$generic-bg: #326ada;
+$generic-bg: #22A1EE;
 
 /*---------------------------------------*/
 /*               Mixins                  */
@@ -165,8 +165,8 @@ $generic-bg: #326ada;
 
     .sidebar {
         background-color: #16202A;
-        color: #326ada;
-        border-right: 2px solid #29333D;
+        color: #22A1EE;
+        border-right: 1px solid #29333D;
 
         li:hover {
             background-color: #142E3D;
@@ -176,8 +176,6 @@ $generic-bg: #326ada;
         .inbox,
         .today,
         .next_7 {
-            border: #29333D;
-
             span {
                 color: white;
             }
@@ -190,7 +188,8 @@ $generic-bg: #326ada;
 
         .sidebar__middle {
             color: white;
-            border-bottom: 3px solid #29333D;
+            border-bottom: none;
+            outline: none;
         }
     }
 
@@ -199,7 +198,7 @@ $generic-bg: #326ada;
     }
 
     .sidebar__middle h2 {
-        color: #326ada;
+        color: #22A1EE;
     }
 
     .add-project__text {
@@ -208,14 +207,38 @@ $generic-bg: #326ada;
 
     .add-project__name {
         background-color: #29333D !important;
+        border: 1px solid #192732;
         color: white;
-        ;
+    }
+
+    .add-task__content {
+        background-color: #29333D !important;
+        border: 1px solid #192732;
+        color: white;
+    }
+
+    .task-date__list {
+        background-color: #29333D;
+
+        li {
+            color: #22A1EE;
+            border-bottom: 1px solid #192732;
+        }
+    }
+
+    .project-overlay__list {
+        background-color: #29333D;
+
+        li {
+            color: #22A1EE;
+            border-bottom: 1px solid #192732;
+        }
     }
 
     .tasks {
         background-color: #16202A;
         color: white;
-        border: 2px solid #192732;
+        border: 1px solid #192732;
     }
 
     .add-task__text {
@@ -448,6 +471,7 @@ header {
         border-bottom: $generic-border;
         padding-left: 10px;
         cursor: pointer;
+        outline: none;
 
         span {
             color: #0000008a;
@@ -514,7 +538,7 @@ header {
     }
 
     .project-text {
-        color: #326ada;
+        color: #22A1EE;
     }
 }
 
@@ -735,11 +759,12 @@ header {
     @include no-select;
     cursor: pointer;
     margin-bottom: 20px;
+    outline: none;
 }
 
 .add-task__plus,
 .add-project__plus {
-    color: #326ada;
+    color: #22A1EE;
     font-size: 18px;
 }
 
