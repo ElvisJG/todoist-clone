@@ -154,22 +154,30 @@ $generic-bg: #22A1EE;
 /*---------------------------------------*/
 
 .darkmode {
-    background: #16202A;
+    background-color: #16202A;
+    -webkit-transition: background-color 0.25s ease-out;
+    transition: background-color 0.25s ease-out;
 
     header {
         -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
         background-color: #16202A;
         border-bottom: 1px solid #29333D;
+        -webkit-transition: background-color 0.25s ease-out;
+        transition: background-color 0.25s ease-out;
     }
 
     .sidebar {
         background-color: #16202A;
         color: #22A1EE;
         border-right: 1px solid #29333D;
+        -webkit-transition: background-color 0.25s ease-out;
+        transition: background-color 0.25s ease-out;
 
         li:hover {
             background-color: #142E3D;
+            -webkit-transition: background-color 0.25s ease-out;
+            transition: background-color 0.25s ease-out;
         }
 
         .sidebar__generic,
@@ -184,6 +192,8 @@ $generic-bg: #22A1EE;
         sidebar__generic,
         li.active {
             background-color: #192732;
+            -webkit-transition: background-color 0.25s ease-out;
+            transition: background-color 0.25s ease-out;
         }
 
         .sidebar__middle {
@@ -209,16 +219,22 @@ $generic-bg: #22A1EE;
         background-color: #29333D !important;
         border: 1px solid #192732;
         color: white;
+        -webkit-transition: background-color 0.25s ease-out;
+        transition: background-color 0.25s ease-out;
     }
 
     .add-task__content {
         background-color: #29333D !important;
         border: 1px solid #192732;
         color: white;
+        -webkit-transition: background-color 0.25s ease-out;
+        transition: background-color 0.25s ease-out;
     }
 
     .task-date__list {
         background-color: #29333D;
+        -webkit-transition: background-color 0.25s ease-out;
+        transition: background-color 0.25s ease-out;
 
         li {
             color: #22A1EE;
@@ -228,6 +244,8 @@ $generic-bg: #22A1EE;
 
     .project-overlay__list {
         background-color: #29333D;
+        -webkit-transition: background-color 0.25s ease-out;
+        transition: background-color 0.25s ease-out;
 
         li {
             color: #22A1EE;
@@ -239,6 +257,8 @@ $generic-bg: #22A1EE;
         background-color: #16202A;
         color: white;
         border: 1px solid #192732;
+        -webkit-transition: background-color 0.25s ease-out;
+        transition: background-color 0.25s ease-out;
     }
 
     .add-task__text {
