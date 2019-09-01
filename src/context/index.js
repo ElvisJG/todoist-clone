@@ -10,11 +10,20 @@ import {
   useSelectedProjectValue
 } from './selected-project-context';
 
+import {
+  DarkModeContext,
+  DarkModeProvider,
+  useDarkMode
+} from './darkmode-context';
+
 export {
   ProjectsContext,
   ProjectsProvider,
   useProjectsValue,
   SelectedProjectContext,
   SelectedProjectProvider,
-  useSelectedProjectValue
+  useSelectedProjectValue,
+  DarkModeContext,
+  DarkModeProvider,
+  useDarkMode
 };

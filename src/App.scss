@@ -154,11 +154,79 @@ $generic-bg: #326ada;
 /*---------------------------------------*/
 
 .darkmode {
+    background: #16202A;
+
     header {
         -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15);
-        background-color: #282828;
-        border-color: transparent;
+        background-color: #16202A;
+        border-bottom: 1px solid #29333D;
+    }
+
+    .sidebar {
+        background-color: #16202A;
+        color: #326ada;
+        border-right: 2px solid #29333D;
+
+        li:hover {
+            background-color: #142E3D;
+        }
+
+        .sidebar__generic,
+        .inbox,
+        .today,
+        .next_7 {
+            border: #29333D;
+
+            span {
+                color: white;
+            }
+        }
+
+        sidebar__generic,
+        li.active {
+            background-color: #192732;
+        }
+
+        .sidebar__middle {
+            color: white;
+            border-bottom: 3px solid #29333D;
+        }
+    }
+
+    .sidebar__middle span {
+        color: white;
+    }
+
+    .sidebar__middle h2 {
+        color: #326ada;
+    }
+
+    .add-project__text {
+        color: white;
+    }
+
+    .add-project__name {
+        background-color: #29333D !important;
+        color: white;
+        ;
+    }
+
+    .tasks {
+        background-color: #16202A;
+        color: white;
+        border: 2px solid #192732;
+    }
+
+    .add-task__text {
+        color: white;
+    }
+
+    .tasks__list {
+        li {
+            color: white;
+            border-bottom: 1px solid #192732;
+        }
     }
 }
 
@@ -167,7 +235,7 @@ $generic-bg: #326ada;
 /*---------------------------------------*/
 
 header {
-    border-bottom: solid 1px #433e90;
+    border-bottom: solid 1px #103377;
     background-color: $generic-bg;
     -webkit-transition: height 200ms ease-in;
     transition: height 200ms ease-in;
@@ -444,6 +512,10 @@ header {
             }
         }
     }
+
+    .project-text {
+        color: #326ada;
+    }
 }
 
 /*---------------------------------------*/
@@ -667,7 +739,7 @@ header {
 
 .add-task__plus,
 .add-project__plus {
-    color: #433e90;
+    color: #326ada;
     font-size: 18px;
 }
 

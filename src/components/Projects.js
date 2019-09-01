@@ -34,6 +34,7 @@ export const Projects = ({ activeValue = null }) => {
             setActive(project.projectId);
             setSelectedProject(project.projectId);
           }}
+          className='project-text'
         >
           <Project project={project} />
         </div>

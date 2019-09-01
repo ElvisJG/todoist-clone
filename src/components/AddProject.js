@@ -27,14 +27,14 @@ export const AddProject = ({ shouldShow = false }) => {
       });
 
   return (
-    <div className='add-project' data-testId='add-project'>
+    <div className='add-project' data-testid='add-project'>
       {show && (
         <div className='add-project__input'>
           <input
             value={projectName}
             onChange={e => setProjectName(e.target.value)}
             className='add-project__name'
-            data-testId='project-name'
+            data-testid='project-name'
             type='text'
             placeholder='Name your Project'
           />
@@ -42,12 +42,12 @@ export const AddProject = ({ shouldShow = false }) => {
             className='add-project__submit'
             type='button'
             onClick={() => AddProject()}
-            data-testId='add-project-submit'
+            data-testid='add-project-submit'
           >
             Add Project
           </button>
           <span
-            data-testId='hide-project-overlay'
+            data-testid='hide-project-overlay'
             className='add-project__cance'
             onClick={() => setShow(false)}
           >
@@ -57,7 +57,7 @@ export const AddProject = ({ shouldShow = false }) => {
       )}
       <span className='add-project__plus'>+</span>
       <span
-        data-testId='add-project-action'
+        data-testid='add-project-action'
         className='add-project__text'
         onClick={() => setShow(!show)}
       >
