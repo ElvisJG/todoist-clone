@@ -12,7 +12,7 @@ export const useTasks = selectedProject => {
     let unsubscribe = firebase
       .firestore()
       .collection('tasks')
-      .where('userId', '==', 'jlIFXIwyAL3tzHMtzRbw');
+      .where('userId', '==', 'hiremepls');
 
     // pass in a selected project, if it doesn't exist in exist in tasksExist, projectID fires off
     // and gets projects using projectID. The project is checked if it is equal to TODAY. Moment
@@ -73,7 +73,7 @@ export const useProjects = () => {
     firebase
       .firestore()
       .collection('projects')
-      .where('userId', '==', 'jlIFXIwyAL3tzHMtzRbw')
+      .where('userId', '==', 'hiremepls')
       .orderBy('projectId')
       .get()
       .then(snapshot => {
